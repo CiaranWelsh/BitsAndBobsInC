@@ -49,3 +49,12 @@ message("AgentBasedSystemBasic project is:		 ${AgentBasedSystemBasic}")
 if (${AgentBasedSystemBasic})
     add_subdirectory(${AgentBasedSystemBasic_DIR})
 endif ()
+
+# "CopyAnInt" project
+########################################
+set(CopyAnInt_DIR ${PROJECT_SOURCE_DIR}/CopyAnInt)
+set(CopyAnInt ON)
+message("CopyAnInt project is:		 ${CopyAnInt}")
+if (${CopyAnInt})
+    add_subdirectory(${CopyAnInt_DIR})
+endif ()

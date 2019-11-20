@@ -23,9 +23,8 @@ public:
         for (int i=0; i < X ; ++i){
             for (int j=0; j < Y; ++j){
                 Position pos = Position(i, j);
+                int* id = malloc(sizeof(int));
                 Patch p = Patch(pos, last_used_id_);
-                std::cout << p.id << " " << &p.id << std::endl;
-//                grid[i][j] = p;
                 last_used_id_++;
             }
         }

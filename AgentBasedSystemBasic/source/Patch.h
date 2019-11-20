@@ -5,6 +5,7 @@
 #ifndef BITSANDBOBSINC_PATCH_H
 #define BITSANDBOBSINC_PATCH_H
 
+#include <iostream>
 #include "Component.h"
 
 class Patch : public Component{
@@ -13,7 +14,10 @@ public:
     Position &pos;
     int id;
     Patch(Position& pos, int id) : pos(pos),
-        id(id), Component(pos, id){};
+        id(id), Component(pos, id){
+//        std::cout << id << "         " << &id << std::endl;
+
+    };
 };
 
 
