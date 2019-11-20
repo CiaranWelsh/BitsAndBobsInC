@@ -5,12 +5,11 @@ using namespace std;
 
 class Vector {
 public:
-    Vector(int s) :
-    elem{new double[s]},
-    sz(s) {
-
-    }
+    Vector(int s);
     double& operator[](int i) {
+        // We check to see whether i is in range 0 < i < sz
+        if (i < 0 || size() <= i)
+            throw out_of_range("Vector::operator[]");
         return elem[i];
     }
     int size(){
@@ -22,6 +21,13 @@ private:
     double* elem;
     int sz;
 };
+
+Vector::Vector(int s) {
+    if (s < 0)
+        throw length_error("");
+    elem = new double[s];
+    sz = s;
+}
 
 
 int main(){
