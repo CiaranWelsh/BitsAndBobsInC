@@ -9,7 +9,7 @@ def modify_main_cmake(project_name):
 set({0}_DIR ${{PROJECT_SOURCE_DIR}}/{0})
 set({0} ON)
 message("{0} project is:\t\t ${{{0}}}")
-if (${{0}})
+if (${{{0}}})
     add_subdirectory(${{{0}_DIR}})
 endif ()
 """.format(project_name)
@@ -51,7 +51,7 @@ if __name__ == '__main__':
     main_cmake_location = os.path.join(wd, 'CMakeLists.txt')
     sub_cmake_location = os.path.join(project_location, 'CMakeLists.txt')
     project_source_dir = os.path.join(project_location, 'source')
-    project_source_file = os.path.join(project_source_dir, project_name)
+    project_source_file = os.path.join(project_source_dir, project_name + '.cpp')
 
     if not os.path.isdir(project_location):
         os.makedirs(project_location)
@@ -67,9 +67,7 @@ if __name__ == '__main__':
         current_cmake_text = f.read()
 
     main_cmake_new_text = modify_main_cmake(project_name)
-    print(main_cmake_new_text)
     if not main_cmake_new_text in current_cmake_text:
-        print('asdfasdf')
         with open(main_cmake_location, 'a') as f:
             f.write(main_cmake_new_text)
 
