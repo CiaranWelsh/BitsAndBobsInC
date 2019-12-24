@@ -139,3 +139,66 @@ message("ReferencesInForEachLoops project is:		 ${ReferencesInForEachLoops}")
 if (${ReferencesInForEachLoops})
     add_subdirectory(${ReferencesInForEachLoops_DIR})
 endif ()
+
+# "ReferencesVsPointers" project
+########################################
+set(ReferencesVsPointers_DIR ${PROJECT_SOURCE_DIR}/ReferencesVsPointers)
+set(ReferencesVsPointers ON)
+message("ReferencesVsPointers project is:		 ${ReferencesVsPointers}")
+if (${ReferencesVsPointers})
+    add_subdirectory(${ReferencesVsPointers_DIR})
+endif ()
+
+# "CopyConstructor" project
+########################################
+set(CopyConstructor_DIR ${PROJECT_SOURCE_DIR}/CopyConstructor)
+set(CopyConstructor ON)
+message("CopyConstructor project is:		 ${CopyConstructor}")
+if (${CopyConstructor})
+    add_subdirectory(${CopyConstructor_DIR})
+endif ()
+
+# "Templates" project
+########################################
+set(Templates_DIR ${PROJECT_SOURCE_DIR}/Templates)
+set(Templates ON)
+message("Templates project is:		 ${Templates}")
+if (${Templates})
+    add_subdirectory(${Templates_DIR})
+endif ()
+
+# "SlicableVector" project
+########################################
+set(SlicableVector_DIR ${PROJECT_SOURCE_DIR}/SlicableVector)
+set(SlicableVector ON)
+message("SlicableVector project is:		 ${SlicableVector}")
+if (${SlicableVector})
+    add_subdirectory(${SlicableVector_DIR})
+endif ()
+
+# "VehicleFactory" project
+########################################
+set(VehicleFactory_DIR ${PROJECT_SOURCE_DIR}/VehicleFactory)
+set(VehicleFactory ON)
+message("VehicleFactory project is:		 ${VehicleFactory}")
+if (${VehicleFactory})
+    add_subdirectory(${VehicleFactory_DIR})
+endif ()
+
+# "ReturnTypePolymorphism" project
+########################################
+set(ReturnTypePolymorphism_DIR ${PROJECT_SOURCE_DIR}/ReturnTypePolymorphism)
+set(ReturnTypePolymorphism ON)
+message("ReturnTypePolymorphism project is:		 ${ReturnTypePolymorphism}")
+if (${ReturnTypePolymorphism})
+    add_subdirectory(${ReturnTypePolymorphism_DIR})
+endif ()
+
+# "Counter" project
+########################################
+set(Counter_DIR ${PROJECT_SOURCE_DIR}/Counter)
+set(Counter ON)
+message("Counter project is:		 ${Counter}")
+if (${Counter})
+    add_subdirectory(${Counter_DIR})
+endif ()
