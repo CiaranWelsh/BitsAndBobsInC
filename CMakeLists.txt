@@ -202,3 +202,12 @@ message("Counter project is:		 ${Counter}")
 if (${Counter})
     add_subdirectory(${Counter_DIR})
 endif ()
+
+# "UseOfUniquePtr" project
+########################################
+set(UseOfUniquePtr_DIR ${PROJECT_SOURCE_DIR}/UseOfUniquePtr)
+set(UseOfUniquePtr ON)
+message("UseOfUniquePtr project is:		 ${UseOfUniquePtr}")
+if (${UseOfUniquePtr})
+    add_subdirectory(${UseOfUniquePtr_DIR})
+endif ()
