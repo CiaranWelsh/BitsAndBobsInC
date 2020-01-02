@@ -10,7 +10,7 @@ using namespace std;
 
 int main(){
     /*
-     * A pointer can be declared as as void, yet a reference cannot.
+     * EventA pointer can be declared as as void, yet a reference cannot.
      *
      * What is the point of declaring a void pointer?
      */

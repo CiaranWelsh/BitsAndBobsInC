@@ -56,7 +56,7 @@ public:
 };
 
 int main() {
-    vector<string> x = {"A", "A", "B", "B", "C", "D", "D", "D"};
+    vector<string> x = {"EventA", "EventA", "EventB", "EventB", "C", "D", "D", "D"};
 
     Counter<string> counter(x);
     unordered_map<string, int> count = counter.count();

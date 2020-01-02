@@ -211,3 +211,30 @@ message("UseOfUniquePtr project is:		 ${UseOfUniquePtr}")
 if (${UseOfUniquePtr})
     add_subdirectory(${UseOfUniquePtr_DIR})
 endif ()
+
+# "SharedPtr" project
+########################################
+set(SharedPtr_DIR ${PROJECT_SOURCE_DIR}/SharedPtr)
+set(SharedPtr ON)
+message("SharedPtr project is:		 ${SharedPtr}")
+if (${SharedPtr})
+    add_subdirectory(${SharedPtr_DIR})
+endif ()
+
+# "PolymorphicBasePointers" project
+########################################
+set(PolymorphicBasePointers_DIR ${PROJECT_SOURCE_DIR}/PolymorphicBasePointers)
+set(PolymorphicBasePointers ON)
+message("PolymorphicBasePointers project is:		 ${PolymorphicBasePointers}")
+if (${PolymorphicBasePointers})
+    add_subdirectory(${PolymorphicBasePointers_DIR})
+endif ()
+
+# "UninstantiatedClassAsVariable" project
+########################################
+set(UninstantiatedClassAsVariable_DIR ${PROJECT_SOURCE_DIR}/UninstantiatedClassAsVariable)
+set(UninstantiatedClassAsVariable ON)
+message("UninstantiatedClassAsVariable project is:		 ${UninstantiatedClassAsVariable}")
+if (${UninstantiatedClassAsVariable})
+    add_subdirectory(${UninstantiatedClassAsVariable_DIR})
+endif ()
