@@ -238,3 +238,30 @@ message("UninstantiatedClassAsVariable project is:		 ${UninstantiatedClassAsVari
 if (${UninstantiatedClassAsVariable})
     add_subdirectory(${UninstantiatedClassAsVariable_DIR})
 endif ()
+
+# "ConstructorInheritance" project
+########################################
+set(ConstructorInheritance_DIR ${PROJECT_SOURCE_DIR}/ConstructorInheritance)
+set(ConstructorInheritance ON)
+message("ConstructorInheritance project is:		 ${ConstructorInheritance}")
+if (${ConstructorInheritance})
+    add_subdirectory(${ConstructorInheritance_DIR})
+endif ()
+
+# "InstantiatingFromPointerInConstructor" project
+########################################
+set(InstantiatingFromPointerInConstructor_DIR ${PROJECT_SOURCE_DIR}/InstantiatingFromPointerInConstructor)
+set(InstantiatingFromPointerInConstructor ON)
+message("InstantiatingFromPointerInConstructor project is:		 ${InstantiatingFromPointerInConstructor}")
+if (${InstantiatingFromPointerInConstructor})
+    add_subdirectory(${InstantiatingFromPointerInConstructor_DIR})
+endif ()
+
+# "CircumventingCircularDependencies" project
+########################################
+set(CircumventingCircularDependencies_DIR ${PROJECT_SOURCE_DIR}/CircumventingCircularDependencies)
+set(CircumventingCircularDependencies ON)
+message("CircumventingCircularDependencies project is:		 ${CircumventingCircularDependencies}")
+if (${CircumventingCircularDependencies})
+    add_subdirectory(${CircumventingCircularDependencies_DIR})
+endif ()

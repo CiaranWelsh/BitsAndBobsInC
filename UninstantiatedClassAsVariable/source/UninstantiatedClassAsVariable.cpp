@@ -14,14 +14,14 @@ public:
     virtual void go() = 0;
 };
 
-class EventA : public Event {
+class EatCheese : public Event {
 public:
     void go() override {
         cout << "Running event A"<< endl;
     }
 };
 
-class EventB : public Event {
+class EatBiscuits : public Event {
 public:
     void go() override {
         cout << "Running event B"<< endl;
@@ -43,8 +43,8 @@ public:
 
 int main() {
     Situation situation;
-    EventA eventA;
-    EventB eventB;
+    EatCheese eventA;
+    EatBiscuits eventB;
     situation.setEvent(&eventA);
     situation.runEvent();
     situation.setEvent(&eventB);

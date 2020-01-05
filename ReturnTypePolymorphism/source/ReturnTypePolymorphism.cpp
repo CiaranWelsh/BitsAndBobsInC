@@ -17,22 +17,22 @@ public :
 class SubClassA : public SuperClass {
 public:
     SubClassA() : SuperClass() {
-        cout << "I'm subclass EventA" << endl;
+        cout << "I'm subclass EatCheese" << endl;
     }
 
     std::string myMethod() override {
-        return "EventA";
+        return "EatCheese";
     }
 };
 
 class SubClassB : public SuperClass {
 public:
     SubClassB() : SuperClass() {
-        cout << "I'm subclass EventB" << endl;
+        cout << "I'm subclass EatBiscuits" << endl;
     }
 
     std::string myMethod() override {
-        return "EventB";
+        return "EatBiscuits";
     }
 };
 
@@ -42,9 +42,9 @@ private:
     std::string which;
 
     std::unique_ptr<SuperClass> letterFactory(){
-        if (which == "EventA") {
+        if (which == "EatCheese") {
             return std::make_unique<SubClassA>();
-        } else if (which == "EventB") {
+        } else if (which == "EatBiscuits") {
             return std::make_unique<SubClassB>();
         } else {
             throw std::invalid_argument("Bad");
@@ -58,7 +58,7 @@ public:
 };
 
 int main() {
-    std::string which = "EventB";
+    std::string which = "EatBiscuits";
     Client client(which);
     return 0;
 };

@@ -1,9 +1,9 @@
 /*
- * EventA copy constructor is a member function which initialised an object using another object of the same class.
- * EventA copy constructor has the general form:
+ * EatCheese copy constructor is a member function which initialised an object using another object of the same class.
+ * EatCheese copy constructor has the general form:
  *      - ClassName(const ClassName &old_obj);
  *
- * EventA copy constructor is called when a new object is created from an existing one
+ * EatCheese copy constructor is called when a new object is created from an existing one
  * The assignment operator on the other hand is called when already initialised objects are assigned new values
  * from another existing object.
  *

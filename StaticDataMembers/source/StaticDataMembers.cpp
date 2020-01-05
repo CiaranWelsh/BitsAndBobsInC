@@ -5,28 +5,28 @@
 using namespace std;
 
 
-class EventA {
+class EatCheese {
 public:
-    EventA() {
-        cout << "Constructor for EventA has been called" << endl;
+    EatCheese() {
+        cout << "Constructor for EatCheese has been called" << endl;
     }
 };
 
 
-class EventB {
-    static EventA a;
+class EatBiscuits {
+    static EatCheese a;
 public:
-    EventB() {
-        cout << "Constructor for EventB has been called" << endl;
+    EatBiscuits() {
+        cout << "Constructor for EatBiscuits has been called" << endl;
     }
 };
 
 int main() {
 
     /*
-     * Note: no "()" after EventB. Why not?
+     * Note: no "()" after EatBiscuits. Why not?
      *
-     * The output of this program is  "Constructor for EventB has been called". The reason the constructor for EventA
+     * The output of this program is  "Constructor for EatBiscuits has been called". The reason the constructor for EatCheese
      * was not called is because static members are only declared in the class declaration. They are not defined.
      * Static members must be explicetly defined outside the class declaration using a scope resolution operator.
      *
@@ -35,7 +35,7 @@ int main() {
      * Static members are shared among all objects which is why they are also called class members or field members.
      * Static members can be accessed without objects
      */
-    EventB b;
+    EatBiscuits b;
 
     return 0;
 };
