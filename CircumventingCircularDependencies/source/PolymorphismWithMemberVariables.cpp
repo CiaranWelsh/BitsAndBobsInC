@@ -22,7 +22,7 @@ public:
 
     Event() = default;
 
-    ~Event() = default;
+    virtual ~Event() = default; // must must must be virtual
 
     Event(Event const &event) = default;
 

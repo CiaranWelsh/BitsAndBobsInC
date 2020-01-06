@@ -259,9 +259,18 @@ endif ()
 
 # "CircumventingCircularDependencies" project
 ########################################
-set(CircumventingCircularDependencies_DIR ${PROJECT_SOURCE_DIR}/CircumventingCircularDependencies)
+set(PolymorphismWithMemberVariables_DIR ${PROJECT_SOURCE_DIR}/PolymorphismWithMemberVariables)
 set(CircumventingCircularDependencies ON)
-message("CircumventingCircularDependencies project is:		 ${CircumventingCircularDependencies}")
-if (${CircumventingCircularDependencies})
-    add_subdirectory(${CircumventingCircularDependencies_DIR})
+message("PolymorphismWithMemberVariables project is:		 ${PolymorphismWithMemberVariables}")
+if (${PolymorphismWithMemberVariables})
+    add_subdirectory(${PolymorphismWithMemberVariables_DIR})
+endif ()
+
+# "ReferencesUpdatingThemselves" project
+########################################
+set(ReferencesUpdatingThemselves_DIR ${PROJECT_SOURCE_DIR}/ReferencesUpdatingThemselves)
+set(ReferencesUpdatingThemselves ON)
+message("ReferencesUpdatingThemselves project is:		 ${ReferencesUpdatingThemselves}")
+if (${ReferencesUpdatingThemselves})
+    add_subdirectory(${ReferencesUpdatingThemselves_DIR})
 endif ()

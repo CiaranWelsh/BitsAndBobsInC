@@ -1,8 +1,8 @@
 
 cmake_minimum_required(VERSION 3.0)
 
-add_executable(CircumventingCircularDependencies ${CircumventingCircularDependencies_DIR}/source/CircumventingCircularDependencies.cpp)
+add_executable(PolymorphismWithMemberVariables ${PolymorphismWithMemberVariables_DIR}/source/PolymorphismWithMemberVariables.cpp)
 target_sources(
-        CircumventingCircularDependencies PUBLIC ${CircumventingCircularDependencies_DIR}/source/CircumventingCircularDependencies.cpp
+        PolymorphismWithMemberVariables PUBLIC ${PolymorphismWithMemberVariables_DIR}/source/PolymorphismWithMemberVariables.cpp
 )
 
