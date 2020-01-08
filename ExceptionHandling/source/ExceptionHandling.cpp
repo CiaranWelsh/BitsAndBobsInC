@@ -1,3 +1,6 @@
+/*
+ * https://stackoverflow.com/questions/59650217/how-to-build-an-exception-class-that-reports-which-file-and-line-numbers-in-c#59650333
+ */
 #include <iostream>
 #include <stdexcept>
 #include <sstream>

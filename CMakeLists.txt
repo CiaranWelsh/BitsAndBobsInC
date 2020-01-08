@@ -301,3 +301,12 @@ message("ExceptionHandling project is:		 ${ExceptionHandling}")
 if (${ExceptionHandling})
     add_subdirectory(${ExceptionHandling_DIR})
 endif ()
+
+# "AllElementsOfAVectorEqual" project
+########################################
+set(AllElementsOfAVectorEqual_DIR ${PROJECT_SOURCE_DIR}/AllElementsOfAVectorEqual)
+set(AllElementsOfAVectorEqual ON)
+message("AllElementsOfAVectorEqual project is:		 ${AllElementsOfAVectorEqual}")
+if (${AllElementsOfAVectorEqual})
+    add_subdirectory(${AllElementsOfAVectorEqual_DIR})
+endif ()
