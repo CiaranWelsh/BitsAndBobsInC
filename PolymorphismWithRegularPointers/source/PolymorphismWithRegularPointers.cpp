@@ -1,3 +1,5 @@
+
+
 /*
  * Stackoverflow question here:
  * https://stackoverflow.com/questions/59615767/why-does-this-call-to-getnoise-use-the-base-class-implementation-and-not-the-s?noredirect=1#comment105395207_59615767
@@ -33,6 +35,13 @@ public:
     }
 };
 
+class RedTailDuck : public Duck {
+public:
+    RedTailDuck() {
+        noise = "Red Quack!";
+    }
+};
+
 /*
  * 1) subclasses do not need another implementation of getNoise
  * 2) make noise protected in base class
@@ -45,23 +54,39 @@ public:
     }
 };
 
+class BlueTailDog : public Dog {
+public:
+    BlueTailDog() {
+        noise = "Blue Bark!";
+    }
+};
+
 typedef std::shared_ptr<Animal> AnimalsPtr;
 
 
 class AnimalsContainer {
 public:
-    std::vector<AnimalsPtr> animals;
-    AnimalsPtr front;
-    Duck duck;
-    Dog dog;
+    std::vector<Animal*> animals;
+    Animal* front;
 
     AnimalsContainer() {
-        animals.push_back(std::make_unique<Animal>(duck));
-        animals.push_back(std::make_unique<Animal>(dog));
+        auto* duck = new Duck();
+        auto* redTailDuck = new RedTailDuck();
+        auto* dog = new Dog();
+        auto* blueDog = new BlueTailDog();
+        animals.push_back(duck);
+        animals.push_back(dog);
+        animals.push_back(redTailDuck);
+        animals.push_back(blueDog);
         front = animals[0];
     }
 
-    ~AnimalsContainer() = default;
+    ~AnimalsContainer() {
+        for (Animal* a: animals)
+            delete a;
+        animals.clear();
+    };
+
 };
 
 class Zoo {
@@ -78,7 +103,7 @@ int main() {
 //    cout << animals.front->getNoise() << endl;
 
     Zoo zoo;
-    cout << zoo.animalsContainer.front->getNoise() << endl;
+    cout << zoo.animalsContainer.animals[3]->getNoise() << endl;
 //    Zoo zoo;
 
 //    cout << zoo.animalsContainer.animals.size() << endl;

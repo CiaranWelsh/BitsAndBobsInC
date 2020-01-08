@@ -1,3 +1,4 @@
+
 /*
  * Stackoverflow question here:
  * https://stackoverflow.com/questions/59615767/why-does-this-call-to-getnoise-use-the-base-class-implementation-and-not-the-s?noredirect=1#comment105395207_59615767
@@ -74,20 +75,10 @@ public:
 };
 
 int main() {
-//    AnimalsContainer animals;
-//    cout << animals.front->getNoise() << endl;
 
     Zoo zoo;
     cout << zoo.animalsContainer.front->getNoise() << endl;
-//    Zoo zoo;
-
-//    cout << zoo.animalsContainer.animals.size() << endl;
-//    cout << zoo.animalsContainer.front->getNoise() << endl;
-//    cout << "object.o.important_attribute: " << object.o.important_attribute << endl;
-//    cout << "object.importand_attribute: " << object.important_attribute << endl;
-//    object.o.important_attribute = 10;
-//    cout << "object.o.important_attribute: " << object.o.important_attribute << endl;
-//    cout << "object.importand_attribute: " << object.important_attribute << endl;
 
     return 0;
 };
+

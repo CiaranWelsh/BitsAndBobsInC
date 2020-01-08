@@ -274,3 +274,30 @@ message("ReferencesUpdatingThemselves project is:		 ${ReferencesUpdatingThemselv
 if (${ReferencesUpdatingThemselves})
     add_subdirectory(${ReferencesUpdatingThemselves_DIR})
 endif ()
+
+# "PolymorphismWithSmartPointers" project
+########################################
+set(PolymorphismWithSmartPointers_DIR ${PROJECT_SOURCE_DIR}/PolymorphismWithSmartPointers)
+set(PolymorphismWithSmartPointers ON)
+message("PolymorphismWithSmartPointers project is:		 ${PolymorphismWithSmartPointers}")
+if (${PolymorphismWithSmartPointers})
+    add_subdirectory(${PolymorphismWithSmartPointers_DIR})
+endif ()
+
+# "PolymorphismWithRegularPointers" project
+########################################
+set(PolymorphismWithRegularPointers_DIR ${PROJECT_SOURCE_DIR}/PolymorphismWithRegularPointers)
+set(PolymorphismWithRegularPointers ON)
+message("PolymorphismWithRegularPointers project is:		 ${PolymorphismWithRegularPointers}")
+if (${PolymorphismWithRegularPointers})
+    add_subdirectory(${PolymorphismWithRegularPointers_DIR})
+endif ()
+
+# "ExceptionHandling" project
+########################################
+set(ExceptionHandling_DIR ${PROJECT_SOURCE_DIR}/ExceptionHandling)
+set(ExceptionHandling ON)
+message("ExceptionHandling project is:		 ${ExceptionHandling}")
+if (${ExceptionHandling})
+    add_subdirectory(${ExceptionHandling_DIR})
+endif ()
