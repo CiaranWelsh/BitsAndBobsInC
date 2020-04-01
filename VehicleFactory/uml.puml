@@ -1,0 +1,55 @@
+@startuml
+
+
+enum VehicleType {
+    VT_TwoWheeler
+    VT_ThreeWheeler
+    VT_FourWheeler
+}
+
+class Vehicle{
+    + virtual printVehicle() : void
+}
+
+class VehicleFactory {
+    + CreateVehicle(VehicleType type) : static Vehicle*
+
+}
+
+class TwoWheeler {
+    + printVehicle() : void
+}
+
+class ThreeWheeler {
+    + printVehicle() : void
+}
+
+class FourWheeler {
+    + printVehicle() : void
+}
+
+Vehicle <|-- TwoWheeler
+Vehicle <|-- ThreeWheeler
+Vehicle <|-- FourWheeler
+
+
+class Client {
+    Client(VehicleFactory : VehicleType)
+    
+}
+
+VehicleFactory <-- Client
+VehicleType <-- Client
+Vehicle <-- VehicleFactory
+
+
+
+
+
+
+
+
+
+
+
+@enduml

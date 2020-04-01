@@ -310,3 +310,39 @@ message("AllElementsOfAVectorEqual project is:		 ${AllElementsOfAVectorEqual}")
 if (${AllElementsOfAVectorEqual})
     add_subdirectory(${AllElementsOfAVectorEqual_DIR})
 endif ()
+
+# "LinkingInLinux" project
+########################################
+set(LinkingInLinux_DIR ${PROJECT_SOURCE_DIR}/LinkingInLinux)
+set(LinkingInLinux ON)
+message("LinkingInLinux project is:		 ${LinkingInLinux}")
+if (${LinkingInLinux})
+    add_subdirectory(${LinkingInLinux_DIR})
+endif ()
+
+# "ConfigureFileInCmake" project
+########################################
+set(ConfigureFileInCmake_DIR ${PROJECT_SOURCE_DIR}/ConfigureFileInCmake)
+set(ConfigureFileInCmake ON)
+message("ConfigureFileInCmake project is:		 ${ConfigureFileInCmake}")
+if (${ConfigureFileInCmake})
+    add_subdirectory(${ConfigureFileInCmake_DIR})
+endif ()
+
+# "MallocFunctionInC" project
+########################################
+set(MallocFunctionInC_DIR ${PROJECT_SOURCE_DIR}/MallocFunctionInC)
+set(MallocFunctionInC ON)
+message("MallocFunctionInC project is:		 ${MallocFunctionInC}")
+if (${MallocFunctionInC})
+    add_subdirectory(${MallocFunctionInC_DIR})
+endif ()
+
+# "PutToOperatorOverloading" project
+########################################
+set(PutToOperatorOverloading_DIR ${PROJECT_SOURCE_DIR}/PutToOperatorOverloading)
+set(PutToOperatorOverloading ON)
+message("PutToOperatorOverloading project is:		 ${PutToOperatorOverloading}")
+if (${PutToOperatorOverloading})
+    add_subdirectory(${PutToOperatorOverloading_DIR})
+endif ()
